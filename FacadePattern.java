@@ -76,7 +76,6 @@ class HomeTheaterFacade {
     }
 }
 
-// Main class for testing Facade Pattern
 public class FacadePattern {
     public static void main(String[] args) {
         DVDPlayer dvdPlayer = new DVDPlayer();
