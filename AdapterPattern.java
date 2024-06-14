@@ -1,16 +1,13 @@
-// Target interface
 interface MediaPlayer {
     void play(String audioType, String fileName);
 }
 
-// Adaptee class
 class VlcPlayer {
     void playVlc(String fileName) {
         System.out.println("Playing vlc file. Name: " + fileName);
     }
 }
 
-// Adapter class
 class MediaAdapter implements MediaPlayer {
     private VlcPlayer vlcPlayer = new VlcPlayer();
 
@@ -23,7 +20,6 @@ class MediaAdapter implements MediaPlayer {
     }
 }
 
-// Client class
 class AudioPlayer implements MediaPlayer {
     private MediaAdapter mediaAdapter = new MediaAdapter();
 
@@ -36,7 +32,6 @@ class AudioPlayer implements MediaPlayer {
     }
 }
 
-// Main class to test the adapter pattern
 public class AdapterPattern {
     public static void main(String[] args) {
         AudioPlayer audioPlayer = new AudioPlayer();
