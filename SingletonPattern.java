@@ -1,10 +1,8 @@
-// Singleton OrderManager class
 class OrderManager {
     private static OrderManager instance;
 
     // Private constructor to prevent instantiation
     private OrderManager() {
-        // Initialize order management logic here
         System.out.println("OrderManager instance created.");
     }
 
@@ -16,22 +14,18 @@ class OrderManager {
         return instance;
     }
 
-    // Example method in OrderManager class
     public void placeOrder(String dishName, int quantity) {
         System.out.println("Placing order for " + quantity + " " + dishName);
         // Order processing logic
     }
 
-    // Example method in OrderManager class
     public void cancelOrder(int orderId) {
         System.out.println("Canceling order with ID: " + orderId);
         // Cancel order logic
     }
-
-    // Additional methods as needed
 }
 
-// Usage of the Singleton OrderManager
+
 public class SingletonPattern {
     public static void main(String[] args) {
         OrderManager orderManager1 = OrderManager.getInstance();
