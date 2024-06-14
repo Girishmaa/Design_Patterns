@@ -1,11 +1,8 @@
 import java.util.Scanner;
-
-// Product interface
 interface Dish {
     void prepare();
 }
 
-// Concrete Products
 class Pasta implements Dish {
     @Override
     public void prepare() {
@@ -20,7 +17,6 @@ class Pizza implements Dish {
     }
 }
 
-// Factory class
 class DishFactory {
     // Factory method to create objects based on input type
     public Dish getDish(String dishType) {
@@ -36,7 +32,6 @@ class DishFactory {
     }
 }
 
-// Usage 
 public class FactoryPattern {
     public static void main(String[] args) {
         DishFactory dishFactory = new DishFactory();
