@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// Subject (Publisher)
 class NewspaperPublisher {
     private List<Subscriber> subscribers = new ArrayList<>();
 
@@ -20,12 +19,11 @@ class NewspaperPublisher {
     }
 }
 
-// Observer (Subscriber)
+
 interface Subscriber {
     void update(String news);
 }
 
-// Concrete Observer 1
 class Subscriber1 implements Subscriber {
     @Override
     public void update(String news) {
@@ -33,7 +31,6 @@ class Subscriber1 implements Subscriber {
     }
 }
 
-// Concrete Observer 2
 class Subscriber2 implements Subscriber {
     @Override
     public void update(String news) {
@@ -41,7 +38,7 @@ class Subscriber2 implements Subscriber {
     }
 }
 
-// Main class for testing
+
 public class ObserverPattern {
     public static void main(String[] args) {
         NewspaperPublisher publisher = new NewspaperPublisher();  // Subject
