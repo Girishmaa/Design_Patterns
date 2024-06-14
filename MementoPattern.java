@@ -53,10 +53,9 @@ class Caretaker {
     }
 }
 
-// Usage example
+
 public class MementoPattern {
     public static void main(String[] args) {
-        // Create a text editor
         TextEditor editor = new TextEditor();
         Caretaker caretaker = new Caretaker();
 
