@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-// Product class
 class Meal {
     private String drink;
     private String mainCourse;
@@ -24,7 +23,6 @@ class Meal {
     }
 }
 
-// Builder interface
 interface MealBuilder {
     void buildDrink(String drink);
     void buildMainCourse(String mainCourse);
@@ -32,7 +30,6 @@ interface MealBuilder {
     Meal getMeal();
 }
 
-// Concrete Builder
 class CustomMealBuilder implements MealBuilder {
     private Meal meal;
 
@@ -61,7 +58,6 @@ class CustomMealBuilder implements MealBuilder {
     }
 }
 
-// Director
 class MealDirector {
     private MealBuilder mealBuilder;
 
@@ -80,7 +76,6 @@ class MealDirector {
     }
 }
 
-// Client
 public class BuilderPattern {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
