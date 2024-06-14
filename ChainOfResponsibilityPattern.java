@@ -1,10 +1,8 @@
-// Define the support handler interface
 interface SupportHandler {
     void setNextHandler(SupportHandler handler);
     void handleRequest(Request request);
 }
 
-// Define the request class with a request number field
 class Request {
     private int level;
     private int number; // Request number field
@@ -23,7 +21,6 @@ class Request {
     }
 }
 
-// Concrete support handler implementations
 class Level1Support implements SupportHandler {
     private SupportHandler nextHandler;
 
@@ -87,7 +84,6 @@ class Level3Support implements SupportHandler {
     }
 }
 
-// Usage 
 public class ChainOfResponsibilityPattern{
     public static void main(String[] args) {
         SupportHandler level1 = new Level1Support();
